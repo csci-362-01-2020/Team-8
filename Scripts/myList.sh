@@ -2,7 +2,7 @@
 # This will create, build, and open the webpage with the directory
 
 `./webpage.sh > webpage.html`
-echo Enter a brower you have then press enter:
+echo Enter a browser you have then press enter:
 
 read browser
 
