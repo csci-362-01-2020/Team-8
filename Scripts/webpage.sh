@@ -2,7 +2,7 @@
 
 # This is the javascript for the webpage
 
-x=`ls --format=comma` #this puts the directories in a varible
+x=`ls --format=comma` #this puts the directories in a variable
 
 cat << _EOF_
 
