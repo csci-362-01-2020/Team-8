@@ -1,7 +1,0 @@
-In this test case we looked at the DistanceCalculator Class and ran 2 test cases on it
-
-The Test cases we ran were on the calculate method
-
-The first Test case we ran was to make sure that the value that was returned was 0 when we passed in 2 colours that were the same in our case we used Black and Black
-
-The second Test case we ran was to make sure we got a non 0 number when we passed in 2 different colours. We used yellow and pink
