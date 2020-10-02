@@ -1,0 +1,6 @@
+testCase01
+Requirement: Find the distance between two colors
+Component: DistanceCalculator
+Method: calculate
+Test Inputs: 000000000 000000000
+Expected Outcome: 0.0
