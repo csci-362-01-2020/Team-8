@@ -3,4 +3,4 @@ Test Case ID: TC002
 Test Case Summary: Test the distance between two different colour rgb inputs
 Test Script: 1. Input two different colours 2. Calculate the distance between the two colours
 Test Data: 1. yellow/255255000 2. pink/255192203
-Expected Result: 169.24
+Expected Result: 76.93
