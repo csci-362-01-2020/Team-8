@@ -1,37 +1,56 @@
 #!/bin/bash
 
-# This runs test cases 1
+# This runs a single test case
 
 TESTCASEEXECDIR=/TestCasesExecutables/
 
-echo Enter the test case you would like to run: Format like testCase#
+#echo Enter the test case you would like to run: Format like testCase#
+#
+#read file
 
-read file
+#read file
 
-echo "Doing $file..."
+if [ $# -eq 0 ]; then
+    echo Enter the test case you would like to run: Format like testCase#
+    read testcase
+else
+  # cut off the extension when running the full script
+  testcase=`eval "echo $1 | cut -d'.' -f1"`
+  fi
 
-input=../testCases/$file.txt
+echo "Doing $testcase..."
+
+input=../testCases/$testcase.txt
+
+echo ""
+
+cat $input
+
+echo ""
 
 # This reads and echos each line of the file
-while IFS= read line
-do
-    echo "$line"
-done < "$input"
+#while IFS= read line
+#do
+#    echo "$line"
+#done < "$input"
 
-echo " "
+#Save the arguments to a variable
+LINE5=`cat $input | head -5 | tail -1`
+ARGS=`eval "echo ${LINE5:10}"`
+#echo $ARGS
 
-cd ../$TESTCASEEXECDIR/$file
+cd ../$TESTCASEEXECDIR/$testcase
 
-# x=`pwd`
-#
-# echo "$x"
-#
-# x=`ls`
-#
-# echo "$x"
+#Compile all the java files in the noted executables directory
+find . -name "*.java" > sources.txt
+javac @sources.txt
+# echo compiled
 
-javac DistanceCalculator.java
-javac $file.java
+#Run the testCase file
+java $testcase $ARGS
 
-# These are the arguments for testCase1 - need to figure out how to parse from the text file to find arguments
-java $file 000 000 000 255 255 255
+# Remove the things you made to run the test
+rm sources.txt
+rm $(find . -type f -name "*.class")
+
+echo "---------------------------"
