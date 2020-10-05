@@ -1,6 +1,6 @@
 Test Suite ID: TS001
 Test Case ID: TC004
-Test Case Summary: 
-Test Script: 
-Test Data: 
-Expected Result: 
+Test Case Summary: Test the distance between two opposite rgb inputs (white and black) 
+Test Data: 1. white/ 255 255 255, 2. black/000 000 000
+Arguments: 255 255 255 000 000 000
+Expected Result: 441.67

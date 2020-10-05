@@ -12,13 +12,15 @@ public class testCase1 {
 
 	public static void main(String[] args) {
 
-		Color color1 = Color.decode(args[0]);
-		Color color2 = Color.decode(args[1]);
+		Color color1 = new Color(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]));
+		Color color2 = new Color(Integer.parseInt(args[3]), Integer.parseInt(args[4]), Integer.parseInt(args[5]));
 
 //		System.out.println(args[0]);
 //		System.out.println(args[1]);
 
-		System.out.println(DistanceCalculator.calculate(color1, color2));
+		System.out.println("Theirs " + DistanceCalculator.calculate(color1, color2));
+		System.out.println("Corrected " + DistanceCalculator.calculateCorrected(color1, color2));
+
 
 	}
 }		
