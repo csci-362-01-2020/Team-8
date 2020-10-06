@@ -1,6 +1,6 @@
 Test Suite ID: TS001
 Test Case ID: TC005
-Test Case Summary: Check that getComposantValue returns 0.0 given an input of 0.0
+Test Case Summary: Check that getComposantValue returns 0.0 given an input of 000
 Test Script: 1. Input 0 2. Calculate Composant Value
-Test Data: Input 1: 0.0
+Arguments: 000
 Expected Result: 0.0
