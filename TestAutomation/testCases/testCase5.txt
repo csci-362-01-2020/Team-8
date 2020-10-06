@@ -1,6 +1,8 @@
-Test Suite ID: TS001
-Test Case ID: TC005
-Test Case Summary: Check that getComposantValue returns 0.0 given an input of 000
-Test Script: 1. Input 0 2. Calculate Composant Value
-Arguments: 000
-Expected Result: 0.0
+05
+contrast-finder-utils > ContrastChecker > getComposantValue
+Check that getComposantValue returns 0.0 given an input of 000
+testCase5
+testCase5
+1. 000
+000
+0.0

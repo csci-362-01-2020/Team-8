@@ -1,9 +1,9 @@
 import java.awt.*;
 
-//import static testCasesExecutables.testCase3.DistanceCalculator.calculate;
+//import static testCasesExecutables.testCase1.DistanceCalculator.calculate;
 //import static DistanceCalculator.calculate;
 
-public class testCase3 {
+public class calculateTest {
 
 //	public void calculateTest(Color color1, Color color2, double expectedOutcome){
 //		double realOutcome = calculate(color1, color2);

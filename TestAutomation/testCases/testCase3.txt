@@ -1,6 +1,8 @@
-Test Suite ID: TS001
-Test Case ID: TC003
-Test Case Summary: Calculate the distance between two different color rgb inputs where 2 of the RGB values are the same
-Test Data: 1. 180 180 000, 2. 180 180 60
-Arguments: 180 180 000 180 180 60
-Expected Result: 60.00
+03
+contrast-finder-utils > DistanceCalculator > calculate()
+Calculate the distance between two different color rgb inputs where 2 of the RGB values are the same
+calculateTest
+calculateTest
+1. 180 180 000, 2. 180 180 60
+180 180 000 180 180 60
+60.00

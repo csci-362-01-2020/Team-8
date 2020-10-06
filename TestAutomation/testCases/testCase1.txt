@@ -1,6 +1,9 @@
-Test Suite ID: TS001
-Test Case ID: TC001
-Test Case Summary: Check that the distance between two colors that are the same is 0
-Test Data: 1. black/000 000 000 2. black/000 000 000
-Arguments: 000 000 000 000 000 000
-Expected Result: 0.0
+01
+contrast-finder-utils > DistanceCalculator > calculate()
+Check that the distance between two colors that are the same is 0
+calculateTest
+calculateTest
+1. black/000 000 000, 2. black/000 000 000
+000 000 000 000 000 000
+0.0
+
