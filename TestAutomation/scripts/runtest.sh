@@ -20,7 +20,7 @@ echo "Doing $testcase..."
 
 testfile=../testCases/$testcase.txt
 
-TESTCASEEXECDIR=/TestCasesExecutables/
+TESTCASEEXECDIR=/testCasesExecutables/
 TESTDIR=`cat $testfile | head -4 | tail -1`
 TESTMETHOD=`cat $testfile | head -5 | tail -1`
 ARGS=`cat $testfile | head -7 | tail -1`
