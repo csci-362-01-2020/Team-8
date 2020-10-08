@@ -22,7 +22,8 @@ testfile=../testCases/$testcase.txt
 
 TESTCASEEXECDIR=/testCasesExecutables/
 TESTDIR=`cat $testfile | head -4 | tail -1`
-TESTMETHOD=`cat $testfile | head -5 | tail -1`
+TESTDRIVER=`cat $testfile | head -5 | tail -1`
+TESTMETHOD=`eval "echo $TESTDRIVER | cut -d'.' -f1"`
 ARGS=`cat $testfile | head -7 | tail -1`
 
 echo ""

@@ -4,7 +4,7 @@ Test Case ID
 Component
 Test Case Summary
 Test Directory
-Test Method
+Test Driver
 Test Data
 Arguments
 Expected Result
