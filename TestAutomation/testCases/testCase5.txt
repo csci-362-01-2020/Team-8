@@ -3,6 +3,7 @@ contrast-finder-utils > ContrastChecker > getComposantValue
 Check that getComposantValue returns 0.0 given an input of 000
 testCase5
 testCase5.java
+ContrastChecker.java
 1. 000
 000
 0.0

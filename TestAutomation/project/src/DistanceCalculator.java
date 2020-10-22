@@ -1,4 +1,6 @@
+
 /*
+ *
  * Contrast Finder
  * Copyright (C) 2008-2013  Open-S Company
  *

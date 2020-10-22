@@ -24,7 +24,10 @@ TESTCASEEXECDIR=/testCasesExecutables/
 TESTDIR=`cat $testfile | head -4 | tail -1`
 TESTDRIVER=`cat $testfile | head -5 | tail -1`
 TESTMETHOD=`eval "echo $TESTDRIVER | cut -d'.' -f1"`
-ARGS=`cat $testfile | head -7 | tail -1`
+ARGS=`cat $testfile | head -8 | tail -1`
+
+TANAGURUFILEDIR=/project/src/
+TANAGURUFILE=`cat $testfile | head -6 | tail -1`
 
 echo ""
 
@@ -32,24 +35,27 @@ cat $testfile
 
 echo ""
 
-# This reads and echos each line of the file
-#while IFS= read line
-#do
-#    echo "$line"
-#done < "$input"
+# go to the tanaguru file
+cd ../$TANAGURUFILEDIR/
 
-cd ../$TESTCASEEXECDIR/$TESTDIR
+#compile the file into the directory with the driver
+javac -d ../../$TESTCASEEXECDIR/$TESTDIR $TANAGURUFILE
 
-#Compile all the java files in the noted executables directory
-find . -name "*.java" > sources.txt
-javac @sources.txt
-# echo compiled
+# go to the folder that has the driver
+cd ../../$TESTCASEEXECDIR/$TESTDIR
+
+#compile the driver
+javac $TESTDRIVER
+
+
+echo compiled 
 
 #Run the testCase file
-java $TESTMETHOD $ARGS
+java  $TESTMETHOD $ARGS
 
 # Remove the things you made to run the test
-rm sources.txt
+# go to testautomation directory and in every subfolder delete .class files
+cd ../..
 rm $(find . -type f -name "*.class")
 
 echo "---------------------------"
