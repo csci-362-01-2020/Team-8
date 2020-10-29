@@ -21,13 +21,12 @@ echo "Doing $testcase..."
 testfile=../testCases/$testcase.txt
 
 TESTCASEEXECDIR=/testCasesExecutables/
-TESTDIR=`cat $testfile | head -4 | tail -1`
-TESTDRIVER=`cat $testfile | head -5 | tail -1`
+TESTDRIVER=`cat $testfile | head -4 | tail -1`
+TANAGURUFILE=`cat $testfile | head -5 | tail -1`
 TESTMETHOD=`eval "echo $TESTDRIVER | cut -d'.' -f1"`
-ARGS=`cat $testfile | head -8 | tail -1`
-
-TANAGURUFILEDIR=/project/src/
-TANAGURUFILE=`cat $testfile | head -6 | tail -1`
+ARGS=`cat $testfile | head -7 | tail -1`
+ORACLE=`cat $testfile | head -8 | tail -1`
+TANAGURUFILEDIR=/project/src
 
 echo ""
 
@@ -39,23 +38,35 @@ echo ""
 cd ../$TANAGURUFILEDIR/
 
 #compile the file into the directory with the driver
-javac -d ../../$TESTCASEEXECDIR/$TESTDIR $TANAGURUFILE
+javac -d ../../$TESTCASEEXECDIR $TANAGURUFILE
 
 # go to the folder that has the driver
-cd ../../$TESTCASEEXECDIR/$TESTDIR
+cd ../../$TESTCASEEXECDIR/
 
 #compile the driver
 javac $TESTDRIVER
 
-
 echo compiled 
 
 #Run the testCase file
-java  $TESTMETHOD $ARGS
+java  $TESTMETHOD $ARGS > output.txt
+
+echo "Their result: `cat output.txt`"
+echo "Expected result: $ORACLE"
+
+OUTPUT=$(cat output.txt | tail -1)
+
+if [[ "$OUTPUT" == "$ORACLE" ]]; then
+	echo "The test passed."
+else
+	echo "The test failed."
+fi
+
 
 # Remove the things you made to run the test
-# go to testautomation directory and in every subfolder delete .class files
+# go to testautomation directory and in every subfolder delete .class files and the output.txt file
 cd ../..
 rm $(find . -type f -name "*.class")
+rm $(find . -type f -name "output.txt")
 
 echo "---------------------------"

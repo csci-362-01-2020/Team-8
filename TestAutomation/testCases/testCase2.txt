@@ -1,7 +1,6 @@
 02
 contrast-finder-utils > DistanceCalculator > calculate()
 Test the distance between two different colour rgb inputs
-calculateTest
 calculateTest.java
 DistanceCalculator.java
 1. 240 255 000, 2. 255 192 203

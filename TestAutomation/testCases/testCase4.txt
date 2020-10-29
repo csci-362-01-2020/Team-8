@@ -1,7 +1,6 @@
 04
 contrast-finder-utils > DistanceCalculator > calculate()
 Test the distance between two opposite rgb inputs (white and black)
-calculateTest
 calculateTest.java
 DistanceCalculator.java
 1. white/ 255 255 255, 2. black/000 000 000

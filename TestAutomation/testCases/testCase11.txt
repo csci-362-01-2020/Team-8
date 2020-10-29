@@ -1,0 +1,8 @@
+06
+contrast-finder-utils > ColorConvertor > rgb2Hex()
+Convert purple rgb to hexadecimal
+rgbhexTest.java
+ColorConverter.java
+1. 128 000 128
+128 000 128
+#800080
