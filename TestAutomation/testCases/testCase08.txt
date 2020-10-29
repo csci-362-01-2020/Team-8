@@ -1,8 +1,8 @@
 08
 contrast-finder-utils > ContrastChecker > getComposantValue
 Determine how getComposantValue responds to a positive input
-testCase5
 testCase5.java
+ContrastChecker.java
 1. 1
 1
 0.0003
