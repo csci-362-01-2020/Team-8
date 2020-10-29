@@ -6,7 +6,7 @@ public class testCase5 {
 
 		Double argument = Double.parseDouble(args[0]);
 
-		System.out.println("Answer: " + ContrastChecker.getComposantValue(argument));
+		System.out.println(ContrastChecker.getComposantValue(argument));
 
 	}
 }

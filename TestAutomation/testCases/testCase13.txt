@@ -1,0 +1,8 @@
+08
+contrast-finder-utils > ColorConvertor > rgb2Hex()
+Convert sapphire rgb to hexadecimal
+rgbhexTest.java
+ColorConverter.java
+1. 015 082 186
+015 082 186
+#0F52BA

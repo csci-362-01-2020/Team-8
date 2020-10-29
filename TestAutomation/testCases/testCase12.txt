@@ -1,0 +1,8 @@
+07
+contrast-finder-utils > ColorConvertor > rgb2Hex()
+Convert burgundy rgb to hexadecimal
+rgbhexTest.java
+ColorConverter.java
+1. 128 000 032
+128 000 032
+#800020
