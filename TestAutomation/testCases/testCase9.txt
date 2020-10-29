@@ -1,0 +1,9 @@
+09
+contrast-finder-utils > DistanceCalculator > calculate()
+Determine how calculate responds to a non-hexadecimal input
+calculateTest
+calculateTest.java
+1. black/000 000 000, 2. invalid input/GGG GGG GGG
+000 000 000 GGG GGG GGG
+error
+
