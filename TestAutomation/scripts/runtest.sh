@@ -2,6 +2,8 @@
 
 # This runs a single test case
 
+echo ""
+
 if [ $# -eq 0 ]; then
     echo Enter the test case you would like to run: Format like testCase#
     read testcase
@@ -62,7 +64,7 @@ else
 	echo "The test failed."
 fi
 
-
+echo ""
 # Remove the things you made to run the test
 # go to testautomation directory and in every subfolder delete .class files and the output.txt file
 cd ../..
