@@ -1,0 +1,8 @@
+15
+contrast-finder-utils > ColorConverter > hex2Rgb()
+convert green hexadecimal to rgb
+hexrgbTest.java
+ColorConverter.java
+1. #008000
+#008000
+java.awt.Color[r=0,g=128,b=0]

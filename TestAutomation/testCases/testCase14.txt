@@ -1,0 +1,8 @@
+14
+contrast-finder-utils > ColorConverter > hex2Rgb()
+convert purple hex to rgb
+hexrgbTest.java
+ColorConverter.java
+1. #800080
+#800080
+java.awt.Color[r=128,g=0,b=128]
