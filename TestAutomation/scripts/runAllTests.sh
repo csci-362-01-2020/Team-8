@@ -1,4 +1,4 @@
-cd ../testCases
+cd testCases
 
 for file in *
 do
