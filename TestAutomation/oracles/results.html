@@ -1,0 +1,254 @@
+
+<!DOCTYPE html> > "results.html"
+<html>
+<head>
+<title>Results</title>
+</head>
+<body>
+<br>
+
+<br>
+
+
+01
+contrast-finder-utils > DistanceCalculator > calculate()
+Check that the distance between two colors that are the same is 0
+calculateTest.java
+DistanceCalculator.java
+1. black/000 000 000, 2. black/000 000 000
+000 000 000 000 000 000
+0.0
+
+
+Their result: 0.0
+Expected result: 0.0
+<br>The test passed.
+<br>
+<br>
+
+
+02
+contrast-finder-utils > DistanceCalculator > calculate()
+Test the distance between two different colour rgb inputs
+calculateTest.java
+DistanceCalculator.java
+1. 240 255 000, 2. 255 192 203
+240 255 0 255 192 203
+213.08
+
+Their result: 200.98
+Expected result: 213.08
+<br>The test failed.
+<br>
+<br>
+
+
+03
+contrast-finder-utils > DistanceCalculator > calculate()
+Calculate the distance between two different color rgb inputs where 2 of the RGB values are the same
+calculateTest.java
+DistanceCalculator.java
+1. 180 180 000, 2. 180 180 60
+180 180 000 180 180 60
+60.0
+
+Their result: 60.0
+Expected result: 60.0
+<br>The test passed.
+<br>
+<br>
+
+
+04
+contrast-finder-utils > DistanceCalculator > calculate()
+Test the distance between two opposite rgb inputs (white and black)
+calculateTest.java
+DistanceCalculator.java
+1. white/ 255 255 255, 2. black/000 000 000
+255 255 255 000 000 000
+441.67
+
+Their result: 367.77
+Expected result: 441.67
+<br>The test failed.
+<br>
+<br>
+
+
+05
+contrast-finder-utils > ContrastChecker > getComposantValue
+Check that getComposantValue returns 0.0 given an input of 000
+testCase5.java
+ContrastChecker.java
+1. 000
+000
+0.0
+
+Their result: 0.0
+Expected result: 0.0
+<br>The test passed.
+<br>
+<br>
+
+
+06
+contrast-finder-utils > ContrastChecker > getComposantValue
+Determine how getComposantValue responds to a negative input
+testCase5.java
+ContrastChecker.java
+1. -1
+-1
+-0.0003
+
+Their result: -3.035269835488375E-4
+Expected result: -0.0003
+<br>The test failed.
+<br>
+<br>
+
+
+07
+contrast-finder-utils > ContrastChecker > getComposantValue
+Determine how getComposantValue responds to an input that is not a number
+testCase5.java
+ContrastChecker.java
+1. "apple"
+"apple"
+error
+
+Their result: 
+Expected result: error
+<br>The test failed.
+<br>
+<br>
+
+
+08
+contrast-finder-utils > ContrastChecker > getComposantValue
+Determine how getComposantValue responds to a positive input
+testCase5.java
+ContrastChecker.java
+1. 1
+1
+0.0003
+
+Their result: 3.035269835488375E-4
+Expected result: 0.0003
+<br>The test failed.
+<br>
+<br>
+
+
+09
+contrast-finder-utils > DistanceCalculator > calculate()
+Determine how calculate responds to a non-hexadecimal input
+calculateTest.java
+DistanceCalculator.java
+1. black/000 000 000, 2. invalid input/GGG GGG GGG
+000 000 000 GGG GGG GGG
+error
+
+
+Their result: error
+Expected result: error
+<br>The test passed.
+<br>
+<br>
+
+
+10
+contrast-finder-utils > DistanceCalculator > calculate()
+Determine how calculate responds to a negative input
+calculateTest.java
+DistanceCalculator.java
+1. black/000 000 000, 2. incorrect input/-111 111 111
+000 000 000 -111 111 111
+error
+
+
+Their result: 
+Expected result: error
+<br>The test failed.
+<br>
+<br>
+
+
+11
+contrast-finder-utils > ColorConvertor > rgb2Hex()
+Convert purple rgb to hexadecimal
+rgbhexTest.java
+ColorConverter.java
+1. 128 000 128
+128 000 128
+#800080
+
+Their result: #800080
+Expected result: #800080
+<br>The test passed.
+<br>
+<br>
+
+
+12
+contrast-finder-utils > ColorConvertor > rgb2Hex()
+Convert burgundy rgb to hexadecimal
+rgbhexTest.java
+ColorConverter.java
+1. 128 000 032
+128 000 032
+#800020
+
+Their result: #800020
+Expected result: #800020
+<br>The test passed.
+<br>
+<br>
+
+
+13
+contrast-finder-utils > ColorConvertor > rgb2Hex()
+Convert sapphire rgb to hexadecimal
+rgbhexTest.java
+ColorConverter.java
+1. 015 082 186
+015 082 186
+#0F52BA
+
+Their result: #0F52BA
+Expected result: #0F52BA
+<br>The test passed.
+<br>
+<br>
+
+
+14
+contrast-finder-utils > ColorConverter > hex2Rgb()
+convert purple hex to rgb
+hexrgbTest.java
+ColorConverter.java
+1. #800080
+#800080
+java.awt.Color[r=128,g=0,b=128]
+
+Their result: java.awt.Color[r=128,g=0,b=128]
+Expected result: java.awt.Color[r=128,g=0,b=128]
+<br>The test passed.
+<br>
+<br>
+
+
+15
+contrast-finder-utils > ColorConverter > hex2Rgb()
+convert green hexadecimal to rgb
+hexrgbTest.java
+ColorConverter.java
+1. #008000
+#008000
+java.awt.Color[r=0,g=128,b=0]
+
+Their result: java.awt.Color[r=0,g=128,b=0]
+Expected result: java.awt.Color[r=0,g=128,b=0]
+<br>The test passed.
+<br>
+</body>
+</html>

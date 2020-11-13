@@ -1,8 +1,14 @@
 #!/bin/bash
 
 # This runs a single test case
+cd ../oracles/
+echo "<br>" >> "results.html"
+cd ../scripts/
+TOPLEVEL="oracles"
+ONEDOWN="../oracles"
+TWODOWN="../../oracles"
 
-echo ""
+echo "" >> "$ONEDOWN/results.html"
 
 if [ $# -eq 0 ]; then
     echo Enter the test case you would like to run: Format like testCase#
@@ -13,12 +19,12 @@ else
   fi
 
 if [ "$testcase.txt" == "README.txt" ]; then
-  cat $testcase.txt
-  echo "---------------------------"
+  # cat $testcase.txt
+  # echo "---------------------------"
   exit
   fi
 
-echo "Doing $testcase..."
+# echo "Doing $testcase..."
 
 testfile=../testCases/$testcase.txt
 
@@ -30,11 +36,11 @@ ARGS=`cat $testfile | head -7 | tail -1`
 ORACLE=`cat $testfile | head -8 | tail -1`
 TANAGURUFILEDIR=/project/src
 
-echo ""
+echo "" >> "$ONEDOWN/results.html"
 
-cat $testfile
+cat $testfile >> "$ONEDOWN/results.html"
 
-echo ""
+echo "" >> "$ONEDOWN/results.html"
 
 # go to the tanaguru file
 cd ../$TANAGURUFILEDIR/
@@ -48,23 +54,23 @@ cd ../../$TESTCASEEXECDIR/
 #compile the driver
 javac $TESTDRIVER
 
-echo compiled 
+# echo compiled 
 
 #Run the testCase file
 java  $TESTMETHOD $ARGS > output.txt
 
-echo "Their result: `cat output.txt`"
-echo "Expected result: $ORACLE"
+echo "Their result: `cat output.txt`" >> "$ONEDOWN/results.html"
+echo "Expected result: $ORACLE" >> "$ONEDOWN/results.html"
 
 OUTPUT=$(cat output.txt | tail -1)
 
 if [[ "$OUTPUT" == "$ORACLE" ]]; then
-	echo "The test passed."
+	echo "<br>The test passed." >> "$ONEDOWN/results.html"
 else
-	echo "The test failed."
+	echo "<br>The test failed." >> "$ONEDOWN/results.html"
 fi
 
-echo ""
+echo "<br>" >> "$ONEDOWN/results.html"
 # Remove the things you made to run the test
 # go to testautomation directory and in every subfolder delete .class files and the output.txt file
 cd ../..
