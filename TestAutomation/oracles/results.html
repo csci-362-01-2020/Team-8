@@ -1,254 +1,176 @@
 
-<!DOCTYPE html> > "results.html"
+<h1 style=background-color:#000000;color:#FFFFFF>Test Results at Sun Nov 15 18:26:35 EST 2020</h1><br>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Results</title>
 </head>
 <body>
-<br>
-
-<br>
 
 
-01
-contrast-finder-utils > DistanceCalculator > calculate()
-Check that the distance between two colors that are the same is 0
-calculateTest.java
-DistanceCalculator.java
-1. black/000 000 000, 2. black/000 000 000
-000 000 000 000 000 000
-0.0
 
+<b>Test Case ID:</b> 01<br>
+<b>Component:</b> contrast-finder-utils > DistanceCalculator > calculate()<br>
+<b>Requirement:</b> Check that the distance between two colors that are the same is 0<br>
+<b>Arguments:</b> 000 000 000 000 000 000<br>
 
-Their result: 0.0
-Expected result: 0.0
-<br>The test passed.
-<br>
+<b>Their result:</b> 0.0<br>
+<b>Expected result:</b> 0.0
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
 <br>
 
 
-02
-contrast-finder-utils > DistanceCalculator > calculate()
-Test the distance between two different colour rgb inputs
-calculateTest.java
-DistanceCalculator.java
-1. 240 255 000, 2. 255 192 203
-240 255 0 255 192 203
-213.08
+<b>Test Case ID:</b> 02<br>
+<b>Component:</b> contrast-finder-utils > DistanceCalculator > calculate()<br>
+<b>Requirement:</b> Test the distance between two different colour rgb inputs<br>
+<b>Arguments:</b> 240 255 0 255 192 203<br>
 
-Their result: 200.98
-Expected result: 213.08
-<br>The test failed.
-<br>
+<b>Their result:</b> 200.98<br>
+<b>Expected result:</b> 213.08
+<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
 <br>
 
 
-03
-contrast-finder-utils > DistanceCalculator > calculate()
-Calculate the distance between two different color rgb inputs where 2 of the RGB values are the same
-calculateTest.java
-DistanceCalculator.java
-1. 180 180 000, 2. 180 180 60
-180 180 000 180 180 60
-60.0
+<b>Test Case ID:</b> 03<br>
+<b>Component:</b> contrast-finder-utils > DistanceCalculator > calculate()<br>
+<b>Requirement:</b> Calculate the distance between two different color rgb inputs where 2 of the RGB values are the same<br>
+<b>Arguments:</b> 180 180 000 180 180 60<br>
 
-Their result: 60.0
-Expected result: 60.0
-<br>The test passed.
-<br>
+<b>Their result:</b> 60.0<br>
+<b>Expected result:</b> 60.0
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
 <br>
 
 
-04
-contrast-finder-utils > DistanceCalculator > calculate()
-Test the distance between two opposite rgb inputs (white and black)
-calculateTest.java
-DistanceCalculator.java
-1. white/ 255 255 255, 2. black/000 000 000
-255 255 255 000 000 000
-441.67
+<b>Test Case ID:</b> 04<br>
+<b>Component:</b> contrast-finder-utils > DistanceCalculator > calculate()<br>
+<b>Requirement:</b> Test the distance between two opposite rgb inputs (white and black)<br>
+<b>Arguments:</b> 255 255 255 000 000 000<br>
 
-Their result: 367.77
-Expected result: 441.67
-<br>The test failed.
-<br>
+<b>Their result:</b> 367.77<br>
+<b>Expected result:</b> 441.67
+<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
 <br>
 
 
-05
-contrast-finder-utils > ContrastChecker > getComposantValue
-Check that getComposantValue returns 0.0 given an input of 000
-testCase5.java
-ContrastChecker.java
-1. 000
-000
-0.0
+<b>Test Case ID:</b> 05<br>
+<b>Component:</b> contrast-finder-utils > ContrastChecker > getComposantValue<br>
+<b>Requirement:</b> Check that getComposantValue returns 0.0 given an input of 000<br>
+<b>Arguments:</b> 000<br>
 
-Their result: 0.0
-Expected result: 0.0
-<br>The test passed.
-<br>
+<b>Their result:</b> 0.0<br>
+<b>Expected result:</b> 0.0
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
 <br>
 
 
-06
-contrast-finder-utils > ContrastChecker > getComposantValue
-Determine how getComposantValue responds to a negative input
-testCase5.java
-ContrastChecker.java
-1. -1
--1
--0.0003
+<b>Test Case ID:</b> 06<br>
+<b>Component:</b> contrast-finder-utils > ContrastChecker > getComposantValue<br>
+<b>Requirement:</b> Determine how getComposantValue responds to a negative input<br>
+<b>Arguments:</b> -1<br>
 
-Their result: -3.035269835488375E-4
-Expected result: -0.0003
-<br>The test failed.
-<br>
+<b>Their result:</b> -3.035269835488375E-4<br>
+<b>Expected result:</b> -0.0003
+<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
 <br>
 
 
-07
-contrast-finder-utils > ContrastChecker > getComposantValue
-Determine how getComposantValue responds to an input that is not a number
-testCase5.java
-ContrastChecker.java
-1. "apple"
-"apple"
-error
+<b>Test Case ID:</b> 07<br>
+<b>Component:</b> contrast-finder-utils > ContrastChecker > getComposantValue<br>
+<b>Requirement:</b> Determine how getComposantValue responds to an input that is not a number<br>
+<b>Arguments:</b> "apple"<br>
 
-Their result: 
-Expected result: error
-<br>The test failed.
-<br>
+<b>Their result:</b> <br>
+<b>Expected result:</b> error
+<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
 <br>
 
 
-08
-contrast-finder-utils > ContrastChecker > getComposantValue
-Determine how getComposantValue responds to a positive input
-testCase5.java
-ContrastChecker.java
-1. 1
-1
-0.0003
+<b>Test Case ID:</b> 08<br>
+<b>Component:</b> contrast-finder-utils > ContrastChecker > getComposantValue<br>
+<b>Requirement:</b> Determine how getComposantValue responds to a positive input<br>
+<b>Arguments:</b> 1<br>
 
-Their result: 3.035269835488375E-4
-Expected result: 0.0003
-<br>The test failed.
-<br>
+<b>Their result:</b> 3.035269835488375E-4<br>
+<b>Expected result:</b> 0.0003
+<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
 <br>
 
 
-09
-contrast-finder-utils > DistanceCalculator > calculate()
-Determine how calculate responds to a non-hexadecimal input
-calculateTest.java
-DistanceCalculator.java
-1. black/000 000 000, 2. invalid input/GGG GGG GGG
-000 000 000 GGG GGG GGG
-error
+<b>Test Case ID:</b> 09<br>
+<b>Component:</b> contrast-finder-utils > DistanceCalculator > calculate()<br>
+<b>Requirement:</b> Determine how calculate responds to a non-hexadecimal input<br>
+<b>Arguments:</b> 000 000 000 GGG GGG GGG<br>
 
-
-Their result: error
-Expected result: error
-<br>The test passed.
-<br>
+<b>Their result:</b> error<br>
+<b>Expected result:</b> error
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
 <br>
 
 
-10
-contrast-finder-utils > DistanceCalculator > calculate()
-Determine how calculate responds to a negative input
-calculateTest.java
-DistanceCalculator.java
-1. black/000 000 000, 2. incorrect input/-111 111 111
-000 000 000 -111 111 111
-error
+<b>Test Case ID:</b> 10<br>
+<b>Component:</b> contrast-finder-utils > DistanceCalculator > calculate()<br>
+<b>Requirement:</b> Determine how calculate responds to a negative input<br>
+<b>Arguments:</b> 000 000 000 -111 111 111<br>
 
-
-Their result: 
-Expected result: error
-<br>The test failed.
-<br>
+<b>Their result:</b> <br>
+<b>Expected result:</b> error
+<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
 <br>
 
 
-11
-contrast-finder-utils > ColorConvertor > rgb2Hex()
-Convert purple rgb to hexadecimal
-rgbhexTest.java
-ColorConverter.java
-1. 128 000 128
-128 000 128
-#800080
+<b>Test Case ID:</b> 11<br>
+<b>Component:</b> contrast-finder-utils > ColorConvertor > rgb2Hex()<br>
+<b>Requirement:</b> Convert purple rgb to hexadecimal<br>
+<b>Arguments:</b> 128 000 128<br>
 
-Their result: #800080
-Expected result: #800080
-<br>The test passed.
-<br>
+<b>Their result:</b> #800080<br>
+<b>Expected result:</b> #800080
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
 <br>
 
 
-12
-contrast-finder-utils > ColorConvertor > rgb2Hex()
-Convert burgundy rgb to hexadecimal
-rgbhexTest.java
-ColorConverter.java
-1. 128 000 032
-128 000 032
-#800020
+<b>Test Case ID:</b> 12<br>
+<b>Component:</b> contrast-finder-utils > ColorConvertor > rgb2Hex()<br>
+<b>Requirement:</b> Convert burgundy rgb to hexadecimal<br>
+<b>Arguments:</b> 128 000 032<br>
 
-Their result: #800020
-Expected result: #800020
-<br>The test passed.
-<br>
+<b>Their result:</b> #800020<br>
+<b>Expected result:</b> #800020
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
 <br>
 
 
-13
-contrast-finder-utils > ColorConvertor > rgb2Hex()
-Convert sapphire rgb to hexadecimal
-rgbhexTest.java
-ColorConverter.java
-1. 015 082 186
-015 082 186
-#0F52BA
+<b>Test Case ID:</b> 13<br>
+<b>Component:</b> contrast-finder-utils > ColorConvertor > rgb2Hex()<br>
+<b>Requirement:</b> Convert sapphire rgb to hexadecimal<br>
+<b>Arguments:</b> 015 082 186<br>
 
-Their result: #0F52BA
-Expected result: #0F52BA
-<br>The test passed.
-<br>
+<b>Their result:</b> #0F52BA<br>
+<b>Expected result:</b> #0F52BA
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
 <br>
 
 
-14
-contrast-finder-utils > ColorConverter > hex2Rgb()
-convert purple hex to rgb
-hexrgbTest.java
-ColorConverter.java
-1. #800080
-#800080
-java.awt.Color[r=128,g=0,b=128]
+<b>Test Case ID:</b> 14<br>
+<b>Component:</b> contrast-finder-utils > ColorConverter > hex2Rgb()<br>
+<b>Requirement:</b> convert purple hex to rgb<br>
+<b>Arguments:</b> #800080<br>
 
-Their result: java.awt.Color[r=128,g=0,b=128]
-Expected result: java.awt.Color[r=128,g=0,b=128]
-<br>The test passed.
-<br>
+<b>Their result:</b> java.awt.Color[r=128,g=0,b=128]<br>
+<b>Expected result:</b> java.awt.Color[r=128,g=0,b=128]
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
 <br>
 
 
-15
-contrast-finder-utils > ColorConverter > hex2Rgb()
-convert green hexadecimal to rgb
-hexrgbTest.java
-ColorConverter.java
-1. #008000
-#008000
-java.awt.Color[r=0,g=128,b=0]
+<b>Test Case ID:</b> 15<br>
+<b>Component:</b> contrast-finder-utils > ColorConverter > hex2Rgb()<br>
+<b>Requirement:</b> convert green hexadecimal to rgb<br>
+<b>Arguments:</b> #008000<br>
 
-Their result: java.awt.Color[r=0,g=128,b=0]
-Expected result: java.awt.Color[r=0,g=128,b=0]
-<br>The test passed.
+<b>Their result:</b> java.awt.Color[r=0,g=128,b=0]<br>
+<b>Expected result:</b> java.awt.Color[r=0,g=128,b=0]
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
 <br>
 </body>
 </html>

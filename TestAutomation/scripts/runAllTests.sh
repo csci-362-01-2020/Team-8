@@ -1,7 +1,9 @@
 cd oracles
 echo "" > "results.html"
+DATETIME=`date`
+echo "<h1 style=background-color:#000000;color:#FFFFFF>Test Results at $DATETIME</h1><br>" >> "results.html"
 cat >> "results.html" << EOF 
-<!DOCTYPE html> > "results.html"
+<!DOCTYPE html>
 <html>
 <head>
 <title>Results</title>

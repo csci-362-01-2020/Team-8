@@ -2,7 +2,6 @@
 
 # This runs a single test case
 cd ../oracles/
-echo "<br>" >> "results.html"
 cd ../scripts/
 TOPLEVEL="oracles"
 ONEDOWN="../oracles"
@@ -29,6 +28,9 @@ if [ "$testcase.txt" == "README.txt" ]; then
 testfile=../testCases/$testcase.txt
 
 TESTCASEEXECDIR=/testCasesExecutables/
+TESTCASEID=`cat $testfile | head -1 | tail -1`
+COMPONENT=`cat $testfile | head -2 | tail -1`
+REQUIREMENT=`cat $testfile | head -3 | tail -1`
 TESTDRIVER=`cat $testfile | head -4 | tail -1`
 TANAGURUFILE=`cat $testfile | head -5 | tail -1`
 TESTMETHOD=`eval "echo $TESTDRIVER | cut -d'.' -f1"`
@@ -38,7 +40,13 @@ TANAGURUFILEDIR=/project/src
 
 echo "" >> "$ONEDOWN/results.html"
 
-cat $testfile >> "$ONEDOWN/results.html"
+# cat $testfile >> "$ONEDOWN/results.html"
+
+echo "<b>Test Case ID:</b> "$TESTCASEID"<br>" >> "$ONEDOWN/results.html"
+echo "<b>Component:</b> "$COMPONENT"<br>" >> "$ONEDOWN/results.html"
+echo "<b>Requirement:</b> "$REQUIREMENT"<br>" >> "$ONEDOWN/results.html"
+echo "<b>Arguments:</b> "$ARGS"<br>" >> "$ONEDOWN/results.html"
+
 
 echo "" >> "$ONEDOWN/results.html"
 
@@ -59,15 +67,20 @@ javac $TESTDRIVER
 #Run the testCase file
 java  $TESTMETHOD $ARGS > output.txt
 
-echo "Their result: `cat output.txt`" >> "$ONEDOWN/results.html"
-echo "Expected result: $ORACLE" >> "$ONEDOWN/results.html"
+OUTPUT=$(cat output.txt | tail -1)
+
+# echo "Their result: `cat output.txt`" >> "$ONEDOWN/results.html"
+# echo "Expected result: $ORACLE" >> "$ONEDOWN/results.html"
+echo "<b>Their result:</b> "$OUTPUT"<br>" >> "$ONEDOWN/results.html"
+echo "<b>Expected result:</b> "$ORACLE >> "$ONEDOWN/results.html"
 
 OUTPUT=$(cat output.txt | tail -1)
 
 if [[ "$OUTPUT" == "$ORACLE" ]]; then
-	echo "<br>The test passed." >> "$ONEDOWN/results.html"
+	echo "<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>" >> "$ONEDOWN/results.html"
+
 else
-	echo "<br>The test failed." >> "$ONEDOWN/results.html"
+	echo "<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>" >> "$ONEDOWN/results.html"
 fi
 
 echo "<br>" >> "$ONEDOWN/results.html"
