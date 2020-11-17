@@ -1,0 +1,8 @@
+21
+contrast-finder-utils > ColorConverter > offsetRgb()
+Offset all rgb numbers in color - positive
+offsetRGBTest.java
+ColorConverter.java
+1. 155 211 007 6 8 25
+155 211 007 6 8 25
+java.awt.Color[r=161,g=219,b=32]

@@ -1,0 +1,8 @@
+25
+contrast-finder-utils > ColorConverter > offsetRgb()
+Offset rgb number in color - negative out of bounds
+offsetRGBTest.java
+ColorConverter.java
+1. 250 190 65 0 0 -70
+250 190 65 0 0 -70
+error
