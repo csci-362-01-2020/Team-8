@@ -1,0 +1,8 @@
+19
+contrast-finder-utils > ColorConverter > hex2Rgb()
+Check response to invalid input
+hexrgbTest.java
+ColorConverter.java
+1. "apple"
+"apple"
+null

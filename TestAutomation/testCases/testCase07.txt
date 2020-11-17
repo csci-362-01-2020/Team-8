@@ -1,7 +1,7 @@
 07
 contrast-finder-utils > ContrastChecker > getComposantValue
 Determine how getComposantValue responds to an input that is not a number
-testCase5.java
+getComposantTest.java
 ContrastChecker.java
 1. "apple"
 "apple"

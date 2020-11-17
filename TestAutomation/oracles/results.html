@@ -1,5 +1,5 @@
 
-<h1 style=background-color:#000000;color:#FFFFFF>Test Results at Sun Nov 15 18:26:35 EST 2020</h1><br>
+<h1 style=background-color:#000000;color:#FFFFFF>Test Results at Mon Nov 16 22:42:47 EST 2020</h1><br>
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,8 +70,8 @@
 <b>Arguments:</b> -1<br>
 
 <b>Their result:</b> -3.035269835488375E-4<br>
-<b>Expected result:</b> -0.0003
-<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
+<b>Expected result:</b> -3.035269835488375E-4
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
 <br>
 
 
@@ -92,8 +92,8 @@
 <b>Arguments:</b> 1<br>
 
 <b>Their result:</b> 3.035269835488375E-4<br>
-<b>Expected result:</b> 0.0003
-<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
+<b>Expected result:</b> 3.035269835488375E-4
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
 <br>
 
 
@@ -171,6 +171,61 @@
 <b>Their result:</b> java.awt.Color[r=0,g=128,b=0]<br>
 <b>Expected result:</b> java.awt.Color[r=0,g=128,b=0]
 <h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
+<br>
+
+
+<b>Test Case ID:</b> 16<br>
+<b>Component:</b> contrast-finder-utils > ColorConverter > hex2Rgb()<br>
+<b>Requirement:</b> Check response to non-numeric input<br>
+<b>Arguments:</b> #00G000<br>
+
+<b>Their result:</b> null<br>
+<b>Expected result:</b> null
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
+<br>
+
+
+<b>Test Case ID:</b> 17<br>
+<b>Component:</b> contrast-finder-utils > ColorConvertor > rgb2Hex()<br>
+<b>Requirement:</b> Check response to non-numeric input<br>
+<b>Arguments:</b> 128 000 FFF<br>
+
+<b>Their result:</b> <br>
+<b>Expected result:</b> error
+<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
+<br>
+
+
+<b>Test Case ID:</b> 18<br>
+<b>Component:</b> contrast-finder-utils > ColorConvertor > rgb2Hex()<br>
+<b>Requirement:</b> Check response to negative input<br>
+<b>Arguments:</b> -128 000 000<br>
+
+<b>Their result:</b> <br>
+<b>Expected result:</b> error
+<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
+<br>
+
+
+<b>Test Case ID:</b> 19<br>
+<b>Component:</b> contrast-finder-utils > ColorConverter > hex2Rgb()<br>
+<b>Requirement:</b> Check response to invalid input<br>
+<b>Arguments:</b> "apple"<br>
+
+<b>Their result:</b> null<br>
+<b>Expected result:</b> null
+<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
+<br>
+
+
+<b>Test Case ID:</b> 20<br>
+<b>Component:</b> contrast-finder-utils > ColorConvertor > rgb2Hex()<br>
+<b>Requirement:</b> Check response to invalid input<br>
+<b>Arguments:</b> "apple"<br>
+
+<b>Their result:</b> <br>
+<b>Expected result:</b> error
+<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
 <br>
 </body>
 </html>
