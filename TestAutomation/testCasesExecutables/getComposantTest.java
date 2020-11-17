@@ -4,9 +4,14 @@ public class getComposantTest {
 
 	public static void main(String[] args) {
 
-		Double argument = Double.parseDouble(args[0]);
+		try {
+			Double argument = Double.parseDouble(args[0]);
+			System.out.println(ContrastChecker.getComposantValue(argument));
 
-		System.out.println(ContrastChecker.getComposantValue(argument));
+		}
+		catch (Exception e){
+			System.out.println("error");
+		}
 
 	}
 }

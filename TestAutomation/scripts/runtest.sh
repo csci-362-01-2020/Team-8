@@ -72,15 +72,18 @@ OUTPUT=$(cat output.txt | tail -1)
 # echo "Their result: `cat output.txt`" >> "$ONEDOWN/results.html"
 # echo "Expected result: $ORACLE" >> "$ONEDOWN/results.html"
 echo "<b>Their result:</b> "$OUTPUT"<br>" >> "$ONEDOWN/results.html"
+echo "Their result: $OUTPUT"
 echo "<b>Expected result:</b> "$ORACLE >> "$ONEDOWN/results.html"
+echo "Expected result: $ORACLE"
 
 OUTPUT=$(cat output.txt | tail -1)
 
 if [[ "$OUTPUT" == "$ORACLE" ]]; then
 	echo "<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>" >> "$ONEDOWN/results.html"
-
+  echo "passed"
 else
 	echo "<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>" >> "$ONEDOWN/results.html"
+  echo "failed"
 fi
 
 echo "<br>" >> "$ONEDOWN/results.html"
