@@ -35,11 +35,6 @@ TANAGURUFILEDIR=/project/src
 # cat $testfile >> "$ONEDOWN/results.html"
 
 echo "<div class=container>" >> "$ONEDOWN/results.html"
-# echo "<b>Test Case ID:</b> "$TESTCASEID"<br>" >> "$ONEDOWN/results.html"
-# echo "<b>Component:</b> "$COMPONENT"<br>" >> "$ONEDOWN/results.html"
-# echo "<b>Requirement:</b> "$REQUIREMENT"<br>" >> "$ONEDOWN/results.html"
-# echo "<b>Arguments:</b> "$ARGS"<br>" >> "$ONEDOWN/results.html"
-
 
 # go to the tanaguru file
 cd ../$TANAGURUFILEDIR/
@@ -53,93 +48,41 @@ cd ../../$TESTCASEEXECDIR/
 #compile the driver
 javac $TESTDRIVER
 
-# echo compiled 
-
 #Run the testCase file
 java  $TESTMETHOD $ARGS > output.txt
 
 OUTPUT=$(cat output.txt | tail -1)
 
-# echo "Their result: `cat output.txt`" >> "$ONEDOWN/results.html"
-# echo "Expected result: $ORACLE" >> "$ONEDOWN/results.html"
-# echo "<b>Their result:</b> "$OUTPUT"<br>" >> "$ONEDOWN/results.html"
-# echo "Their result: $OUTPUT"
-# echo "<b>Expected result:</b> "$ORACLE >> "$ONEDOWN/results.html"
-# echo "Expected result: $ORACLE"
-
 cat >> $ONEDOWN/results.html << EOL
 <table class="table table-bordered table-sm">
   <tbody>
     <thead class="thead-light">
-    <tr>
-      <th style="width: 20%"> Test Case ID </td>
-      <th style="width: 80%">$TESTCASEID</td>
-    </tr>
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">$TESTCASEID</td>
+      </tr>
     </thead>
     <tr>
       <td> Component </td>
       <td>$COMPONENT</td>
     </tr>
-
     <tr>
-    <td> Requirement </td>
-    <td>$REQUIREMENT</td>
+      <td> Requirement </td>
+      <td>$REQUIREMENT</td>
     </tr>
-
     <tr>
-    <td> Arguments </td>
-    <td>$ARGS</td>
-
+      <td> Arguments </td>
+      <td>$ARGS</td>
     </tr>
-
     <tr>
-    <td> Their result </td>
-    <td>$OUTPUT</td>
+      <td> Their result </td>
+      <td>$OUTPUT</td>
     </tr>
-
     <tr>
-    <td> Expected result </td>
-    <td>$ORACLE</td>
+      <td> Expected result </td>
+      <td>$ORACLE</td>
     </tr>
-
 EOL
-
-# echo "<table class="table table-bordered">"
-#   echo "<tbody>"
-#     echo "<tr>"
-#       echo "<td> Test Case ID </td>"
-#       echo "$TESTCASEID"
-#     echo "</tr>"
-#     echo "<tr>"
-#       echo "<td> Component </td>"
-#       echo "$COMPONENT"
-#     echo "</tr>"
-
-#     echo "<tr>"
-#     echo "<td> Requirement </td>"
-#     echo "$REQUIREMENT"
-#     echo "</tr>"
-
-#     echo "<tr>"
-#     echo "<td> Arguments </td>"
-#     echo "$ARGS"
-
-#     echo "</tr>"
-
-#     echo "<tr>"
-#     echo "<td> Their result </td>"
-#     echo "$OUTPUT"
-#     echo "</tr>"
-
-#     echo "<tr>"
-#     echo "<td> Expected result </td>"
-#     echo "$ORACLE"
-#     echo "</tr>"
-
-#   echo "</tbody>"
-# echo "</table>"
-
-
 
 OUTPUT=$(cat output.txt | tail -1)
 
@@ -163,10 +106,8 @@ echo "</table>" >> "$ONEDOWN/results.html"
 
 echo "</div>" >> "$ONEDOWN/results.html"
 
-#echo "<br>" >> "$ONEDOWN/results.html"
-
 # Remove the things you made to run the test
-# go to testautomation directory and in every subfolder delete .class files and the output.txt file
+# Go to testautomation directory and in every subfolder delete .class files and the output.txt file
 cd ../..
 rm $(find . -type f -name "*.class")
 rm $(find . -type f -name "output.txt")

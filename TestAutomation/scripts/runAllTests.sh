@@ -29,4 +29,4 @@ done
 cd ../oracles
 echo "</body>" >> "results.html"
 echo "</html>" >> "results.html"
-open "results.html"
+xdg-open "results.html"
