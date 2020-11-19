@@ -1,286 +1,916 @@
 
-<h1 style=background-color:#000000;color:#FFFFFF>Test Results at Mon Nov 16 23:39:09 EST 2020</h1><br>
 <!DOCTYPE html>
-<html>
-<head>
-<title>Results</title>
-</head>
-<body>
-
-
-
-<b>Test Case ID:</b> 01<br>
-<b>Component:</b> contrast-finder-utils > DistanceCalculator > calculate()<br>
-<b>Requirement:</b> Check that the distance between two colors that are the same is 0<br>
-<b>Arguments:</b> 000 000 000 000 000 000<br>
-
-<b>Their result:</b> 0.0<br>
-<b>Expected result:</b> 0.0
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 02<br>
-<b>Component:</b> contrast-finder-utils > DistanceCalculator > calculate()<br>
-<b>Requirement:</b> Test the distance between two different colour rgb inputs<br>
-<b>Arguments:</b> 240 255 0 255 192 203<br>
-
-<b>Their result:</b> 200.98<br>
-<b>Expected result:</b> 213.08
-<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 03<br>
-<b>Component:</b> contrast-finder-utils > DistanceCalculator > calculate()<br>
-<b>Requirement:</b> Calculate the distance between two different color rgb inputs where 2 of the RGB values are the same<br>
-<b>Arguments:</b> 180 180 000 180 180 60<br>
-
-<b>Their result:</b> 60.0<br>
-<b>Expected result:</b> 60.0
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 04<br>
-<b>Component:</b> contrast-finder-utils > DistanceCalculator > calculate()<br>
-<b>Requirement:</b> Test the distance between two opposite rgb inputs (white and black)<br>
-<b>Arguments:</b> 255 255 255 000 000 000<br>
-
-<b>Their result:</b> 367.77<br>
-<b>Expected result:</b> 441.67
-<h3 style=background-color:#FF0000;color:#FFFFFF>  The test failed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 05<br>
-<b>Component:</b> contrast-finder-utils > ContrastChecker > getComposantValue<br>
-<b>Requirement:</b> Check that getComposantValue returns 0.0 given an input of 000<br>
-<b>Arguments:</b> 000<br>
-
-<b>Their result:</b> 0.0<br>
-<b>Expected result:</b> 0.0
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 06<br>
-<b>Component:</b> contrast-finder-utils > ContrastChecker > getComposantValue<br>
-<b>Requirement:</b> Determine how getComposantValue responds to a negative input<br>
-<b>Arguments:</b> -1<br>
-
-<b>Their result:</b> -3.035269835488375E-4<br>
-<b>Expected result:</b> -3.035269835488375E-4
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 07<br>
-<b>Component:</b> contrast-finder-utils > ContrastChecker > getComposantValue<br>
-<b>Requirement:</b> Determine how getComposantValue responds to an input that is not a number<br>
-<b>Arguments:</b> "apple"<br>
-
-<b>Their result:</b> error<br>
-<b>Expected result:</b> error
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 08<br>
-<b>Component:</b> contrast-finder-utils > ContrastChecker > getComposantValue<br>
-<b>Requirement:</b> Determine how getComposantValue responds to a positive input<br>
-<b>Arguments:</b> 1<br>
-
-<b>Their result:</b> 3.035269835488375E-4<br>
-<b>Expected result:</b> 3.035269835488375E-4
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 09<br>
-<b>Component:</b> contrast-finder-utils > DistanceCalculator > calculate()<br>
-<b>Requirement:</b> Determine how calculate responds to a non-hexadecimal input<br>
-<b>Arguments:</b> 000 000 000 GGG GGG GGG<br>
-
-<b>Their result:</b> error<br>
-<b>Expected result:</b> error
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 10<br>
-<b>Component:</b> contrast-finder-utils > DistanceCalculator > calculate()<br>
-<b>Requirement:</b> Determine how calculate responds to a negative input<br>
-<b>Arguments:</b> 000 000 000 -111 111 111<br>
-
-<b>Their result:</b> error<br>
-<b>Expected result:</b> error
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 11<br>
-<b>Component:</b> contrast-finder-utils > ColorConvertor > rgb2Hex()<br>
-<b>Requirement:</b> Convert purple rgb to hexadecimal<br>
-<b>Arguments:</b> 128 000 128<br>
-
-<b>Their result:</b> #800080<br>
-<b>Expected result:</b> #800080
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 12<br>
-<b>Component:</b> contrast-finder-utils > ColorConvertor > rgb2Hex()<br>
-<b>Requirement:</b> Convert burgundy rgb to hexadecimal<br>
-<b>Arguments:</b> 128 000 032<br>
-
-<b>Their result:</b> #800020<br>
-<b>Expected result:</b> #800020
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 13<br>
-<b>Component:</b> contrast-finder-utils > ColorConvertor > rgb2Hex()<br>
-<b>Requirement:</b> Convert sapphire rgb to hexadecimal<br>
-<b>Arguments:</b> 015 082 186<br>
-
-<b>Their result:</b> #0F52BA<br>
-<b>Expected result:</b> #0F52BA
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 14<br>
-<b>Component:</b> contrast-finder-utils > ColorConverter > hex2Rgb()<br>
-<b>Requirement:</b> convert purple hex to rgb<br>
-<b>Arguments:</b> #800080<br>
-
-<b>Their result:</b> java.awt.Color[r=128,g=0,b=128]<br>
-<b>Expected result:</b> java.awt.Color[r=128,g=0,b=128]
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 15<br>
-<b>Component:</b> contrast-finder-utils > ColorConverter > hex2Rgb()<br>
-<b>Requirement:</b> convert green hexadecimal to rgb<br>
-<b>Arguments:</b> #008000<br>
-
-<b>Their result:</b> java.awt.Color[r=0,g=128,b=0]<br>
-<b>Expected result:</b> java.awt.Color[r=0,g=128,b=0]
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 16<br>
-<b>Component:</b> contrast-finder-utils > ColorConverter > hex2Rgb()<br>
-<b>Requirement:</b> Check response to non-numeric input<br>
-<b>Arguments:</b> #00G000<br>
-
-<b>Their result:</b> null<br>
-<b>Expected result:</b> null
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 17<br>
-<b>Component:</b> contrast-finder-utils > ColorConvertor > rgb2Hex()<br>
-<b>Requirement:</b> Check response to non-numeric input<br>
-<b>Arguments:</b> 128 000 FFF<br>
-
-<b>Their result:</b> error<br>
-<b>Expected result:</b> error
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 18<br>
-<b>Component:</b> contrast-finder-utils > ColorConvertor > rgb2Hex()<br>
-<b>Requirement:</b> Check response to negative input<br>
-<b>Arguments:</b> -128 000 000<br>
-
-<b>Their result:</b> error<br>
-<b>Expected result:</b> error
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 19<br>
-<b>Component:</b> contrast-finder-utils > ColorConverter > hex2Rgb()<br>
-<b>Requirement:</b> Check response to invalid input<br>
-<b>Arguments:</b> "apple"<br>
-
-<b>Their result:</b> null<br>
-<b>Expected result:</b> null
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 20<br>
-<b>Component:</b> contrast-finder-utils > ColorConvertor > rgb2Hex()<br>
-<b>Requirement:</b> Check response to invalid input<br>
-<b>Arguments:</b> "apple"<br>
-
-<b>Their result:</b> error<br>
-<b>Expected result:</b> error
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 21<br>
-<b>Component:</b> contrast-finder-utils > ColorConverter > offsetRgb()<br>
-<b>Requirement:</b> Check that offsetting by zero does not change color<br>
-<b>Arguments:</b> 200 200 200 0 0 0<br>
-
-<b>Their result:</b> java.awt.Color[r=200,g=200,b=200]<br>
-<b>Expected result:</b> java.awt.Color[r=200,g=200,b=200]
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 21<br>
-<b>Component:</b> contrast-finder-utils > ColorConverter > offsetRgb()<br>
-<b>Requirement:</b> Offset all rgb numbers in color - positive<br>
-<b>Arguments:</b> 155 211 007 6 8 25<br>
-
-<b>Their result:</b> java.awt.Color[r=161,g=219,b=32]<br>
-<b>Expected result:</b> java.awt.Color[r=161,g=219,b=32]
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 23<br>
-<b>Component:</b> contrast-finder-utils > ColorConverter > offsetRgb()<br>
-<b>Requirement:</b> Offset all rgb numbers in color - negative<br>
-<b>Arguments:</b> 155 211 007 -60 -8 -2<br>
-
-<b>Their result:</b> java.awt.Color[r=95,g=203,b=5]<br>
-<b>Expected result:</b> java.awt.Color[r=95,g=203,b=5]
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 24<br>
-<b>Component:</b> contrast-finder-utils > ColorConverter > offsetRgb()<br>
-<b>Requirement:</b> Offset rgb number in color - positive out of bounds<br>
-<b>Arguments:</b> 250 190 65 6 0 0<br>
-
-<b>Their result:</b> error<br>
-<b>Expected result:</b> error
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
-
-
-<b>Test Case ID:</b> 25<br>
-<b>Component:</b> contrast-finder-utils > ColorConverter > offsetRgb()<br>
-<b>Requirement:</b> Offset rgb number in color - negative out of bounds<br>
-<b>Arguments:</b> 250 190 65 0 0 -70<br>
-
-<b>Their result:</b> error<br>
-<b>Expected result:</b> error
-<h3 style=background-color:#008000;color:#FFFFFF>  The test passed.  </h3>
-<br>
+  <html>
+    <head>
+      <title>Results</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+<div class="container pt-3"><h3>Test Results at Tue Nov 17 21:20:13 EST 2020</h3></div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">01</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > DistanceCalculator > calculate()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Check that the distance between two colors that are the same is 0</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>000 000 000 000 000 000</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>0.0</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">02</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > DistanceCalculator > calculate()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Test the distance between two different colour rgb inputs</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>240 255 0 255 192 203</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>200.98</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>213.08</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-danger>  The test failed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">03</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > DistanceCalculator > calculate()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Calculate the distance between two different color rgb inputs where 2 of the RGB values are the same</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>180 180 000 180 180 60</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>60.0</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>60.0</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">04</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > DistanceCalculator > calculate()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Test the distance between two opposite rgb inputs (white and black)</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>255 255 255 000 000 000</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>367.77</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>441.67</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-danger>  The test failed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">05</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ContrastChecker > getComposantValue</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Check that getComposantValue returns 0.0 given an input of 000</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>000</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>0.0</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">06</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ContrastChecker > getComposantValue</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Determine how getComposantValue responds to a negative input</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>-3.035269835488375E-4</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>-3.035269835488375E-4</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">07</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ContrastChecker > getComposantValue</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Determine how getComposantValue responds to an input that is not a number</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>"apple"</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>error</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>error</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">08</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ContrastChecker > getComposantValue</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Determine how getComposantValue responds to a positive input</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>3.035269835488375E-4</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>3.035269835488375E-4</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">09</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > DistanceCalculator > calculate()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Determine how calculate responds to a non-hexadecimal input</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>000 000 000 GGG GGG GGG</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>error</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>error</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">10</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > DistanceCalculator > calculate()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Determine how calculate responds to a negative input</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>000 000 000 -111 111 111</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>error</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>error</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">11</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConvertor > rgb2Hex()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Convert purple rgb to hexadecimal</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>128 000 128</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>#800080</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>#800080</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">12</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConvertor > rgb2Hex()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Convert burgundy rgb to hexadecimal</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>128 000 032</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>#800020</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>#800020</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">13</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConvertor > rgb2Hex()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Convert sapphire rgb to hexadecimal</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>015 082 186</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>#0F52BA</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>#0F52BA</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">14</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConverter > hex2Rgb()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>convert purple hex to rgb</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>#800080</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>java.awt.Color[r=128,g=0,b=128]</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>java.awt.Color[r=128,g=0,b=128]</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">15</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConverter > hex2Rgb()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>convert green hexadecimal to rgb</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>#008000</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>java.awt.Color[r=0,g=128,b=0]</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>java.awt.Color[r=0,g=128,b=0]</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">16</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConverter > hex2Rgb()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Check response to non-numeric input</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>#00G000</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>null</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>null</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">17</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConvertor > rgb2Hex()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Check response to non-numeric input</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>128 000 FFF</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>error</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>error</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">18</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConvertor > rgb2Hex()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Check response to negative input</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>-128 000 000</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>error</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>error</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">19</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConverter > hex2Rgb()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Check response to invalid input</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>"apple"</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>null</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>null</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">20</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConvertor > rgb2Hex()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Check response to invalid input</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>"apple"</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>error</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>error</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">21</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConverter > offsetRgb()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Check that offsetting by zero does not change color</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>200 200 200 0 0 0</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>java.awt.Color[r=200,g=200,b=200]</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>java.awt.Color[r=200,g=200,b=200]</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">21</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConverter > offsetRgb()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Offset all rgb numbers in color - positive</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>155 211 007 6 8 25</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>java.awt.Color[r=161,g=219,b=32]</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>java.awt.Color[r=161,g=219,b=32]</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">23</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConverter > offsetRgb()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Offset all rgb numbers in color - negative</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>155 211 007 -60 -8 -2</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>java.awt.Color[r=95,g=203,b=5]</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>java.awt.Color[r=95,g=203,b=5]</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">24</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConverter > offsetRgb()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Offset rgb number in color - positive out of bounds</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>250 190 65 6 0 0</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>error</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>error</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=container>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 20%"> Test Case ID </td>
+        <th style="width: 80%">25</td>
+      </tr>
+    </thead>
+    <tr>
+      <td> Component </td>
+      <td>contrast-finder-utils > ColorConverter > offsetRgb()</td>
+    </tr>
+    <tr>
+      <td> Requirement </td>
+      <td>Offset rgb number in color - negative out of bounds</td>
+    </tr>
+    <tr>
+      <td> Arguments </td>
+      <td>250 190 65 0 0 -70</td>
+    </tr>
+    <tr>
+      <td> Their result </td>
+      <td>error</td>
+    </tr>
+    <tr>
+      <td> Expected result </td>
+      <td>error</td>
+    </tr>
+<tr>
+<td> Status </td>
+<td class=table-success>  The test passed.  </td>
+</tr>
+</tbody>
+</table>
+</div>
 </body>
 </html>
