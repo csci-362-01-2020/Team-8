@@ -116,6 +116,7 @@ public final class ColorConverter {
      */
     public static Color offsetRgbColor(Color bgColor, int offsetRed, int offsetGreen, int offsetBlue) {
         return new Color(bgColor.getRed() + offsetRed, bgColor.getGreen() + offsetGreen, bgColor.getBlue() - offsetBlue);
+    }
 
     /**
      *
