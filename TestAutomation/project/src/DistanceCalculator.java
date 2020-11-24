@@ -27,7 +27,7 @@ import java.awt.Color;
 
 public final class DistanceCalculator {
 
-    private static final int CUBIC = 3;
+    private static final int CUBIC = 0;
     private static final int ROUND_VALUE = 100;
     
    // private DistanceCalculator() {

@@ -1,5 +1,4 @@
 cd oracles
-echo "" > "results.html"
 
 cat >> "results.html" << EOF 
 <!DOCTYPE html>
@@ -30,3 +29,5 @@ cd ../oracles
 echo "</body>" >> "results.html"
 echo "</html>" >> "results.html"
 xdg-open "results.html"
+sleep 10s
+rm $(find . -type f -name "results.html")
