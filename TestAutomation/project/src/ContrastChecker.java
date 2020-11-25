@@ -136,7 +136,7 @@ public final class ContrastChecker {
      */
     public static double getComposantValue(double composant) {
         double rsgb = composant / RGB_MAX_VALUE;
-        if (rsgb == RSGB_FACTOR) {
+        if (rsgb <= RSGB_FACTOR) {
             return rsgb / LUMINANCE_INF;
         } else {
             return Math.pow(((rsgb + LUMINANCE_SUP_CONST) / LUMINANCE_SUP_CONST2), LUMINANCE_EXP);
