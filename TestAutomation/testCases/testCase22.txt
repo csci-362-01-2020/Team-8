@@ -1,4 +1,4 @@
-21
+22
 contrast-finder-utils > ColorConverter > offsetRgb()
 Offset all rgb numbers in color - positive
 offsetRGBTest.java
