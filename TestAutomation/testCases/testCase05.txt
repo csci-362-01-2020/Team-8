@@ -1,8 +1,8 @@
 05
-contrast-finder-utils > ContrastChecker > getComposantValue
-Check that getComposantValue returns 0.0 given an input of 000
-getComposantTest.java
+contrast-finder-utils > ContrastChecker > distanceColor()
+Find Euclidean distance between two colors
+contrastDistanceTest.java
 ContrastChecker.java
-1. 000
-000
+1. black/000 000 000, 2. black/000 000 000
+000 000 000 000 000 000
 0.0

@@ -25,15 +25,17 @@ EOF
 DATETIME=`date`
 echo "<div class=\"container pt-3\"><h3>Tanaguru Contrast-Finder Automated Testing</h3><h3>Test Results at $DATETIME</h3></div>" >> "results.html"
 
-cd ../testCases
+# get to TestAutomation folder
+cd ..
 
 # loop through test cases
-for file in *
+for file in testCases/*
 do
-  echo $file
-  ./../scripts/runtest.sh $file
+  testcasefile=`eval "echo $file | cut -d'/' -f2"`
+  echo $testcasefile
+  ./scripts/runtest.sh $testcasefile
 done
-cd ../oracles
+cd oracles
 # print results to html file
 echo "</body>" >> "results.html"
 echo "</html>" >> "results.html"

@@ -1,9 +1,9 @@
-// driver for DistanceCalculator.calculate()
+// driver for ContrastChecker.distanceColor
 // return the euclidean distance between two colors
 
 import java.awt.*;
 
-public class calculateTest {
+public class contrastDistanceTest {
 	public static void main(String[] args) {
 
 		try {
@@ -17,12 +17,15 @@ public class calculateTest {
 			Color color1 = new Color(arg0, arg1, arg2);
 			Color color2 = new Color(arg3, arg4, arg5);
 
-			double result = DistanceCalculator.calculate(color1,color2);
-			System.out.println(result);
+			double result = ContrastChecker.distanceColor(color1,color2);
+
+            // round to nearest 100th
+            double resultRounded = Math.round(result*100.0) / 100.0;
+
+			System.out.println(resultRounded);
 		}
 		catch (Exception e){
 			System.out.println("error");
 		}
 	}
 }		
-
