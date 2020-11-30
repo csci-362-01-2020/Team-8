@@ -2,11 +2,7 @@
 # runtest.sh
 # This runs a single test case
 
-cd ../oracles/
-cd ../scripts/
-TOPLEVEL="oracles"
-ONEDOWN="../oracles"
-TWODOWN="../../oracles"
+cd testCases
 
 # if running a single testCase and there is no testCaseID argument then user must enter testCase#
 if [ $# -eq 0 ]; then
@@ -21,6 +17,12 @@ else
 if [ "$testcase.txt" == "README.txt" ]; then
   exit
   fi
+
+cd ../oracles/
+cd ../scripts/
+TOPLEVEL="oracles"
+ONEDOWN="../oracles"
+TWODOWN="../../oracles"
 
 testfile=../testCases/$testcase.txt
 
@@ -91,6 +93,8 @@ OUTPUT=$(cat output.txt | tail -1)
 
 echo "<tr>" >> "$ONEDOWN/results.html"
 echo "<td> Status </td>" >> "$ONEDOWN/results.html"
+
+# echo $OUTPUT
 
 if [[ "$OUTPUT" == "$ORACLE" ]]; then
 	echo "<td class=table-success>  The test passed.  </td>" >> "$ONEDOWN/results.html"
