@@ -1,9 +1,6 @@
 
 import java.awt.*;
 
-//import static testCasesExecutables.testCase1.DistanceCalculator.calculate;
-//import static DistanceCalculator.calculate;
-
 public class offsetRGBTest {
 
 	public static void main(String[] args) {

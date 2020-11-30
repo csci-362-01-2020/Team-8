@@ -2,7 +2,6 @@ import java.awt.*;
 
 public class hexrgbTest {
 
-
 	public static void main(String[] args) {
 
 		try {
