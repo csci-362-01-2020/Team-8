@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # runtest.sh
 # This runs a single test case
 

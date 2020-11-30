@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # runAllTests.sh
 # script that loops through all tests in testCases folder
 # displays test results in a browser
