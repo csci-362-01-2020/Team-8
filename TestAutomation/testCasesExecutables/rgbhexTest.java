@@ -1,6 +1,5 @@
 import java.awt.*;
 
-
 public class rgbhexTest {
 
 	public static void main(String[] args) {

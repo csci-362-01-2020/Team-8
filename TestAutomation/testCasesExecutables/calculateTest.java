@@ -1,9 +1,6 @@
 
 import java.awt.*;
 
-//import static testCasesExecutables.testCase1.DistanceCalculator.calculate;
-//import static DistanceCalculator.calculate;
-
 public class calculateTest {
 
 
@@ -17,13 +14,6 @@ public class calculateTest {
 		catch (Exception e){
 			System.out.println("error");
 		}
-
-
-
-	//	System.out.println(DistanceCalculator.calculate(color1, color2));
-	//	System.out.println("Corrected " + DistanceCalculator.calculateCorrected(color1, color2));
-
-
 	}
 }		
 

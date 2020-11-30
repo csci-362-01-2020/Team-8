@@ -1,4 +1,5 @@
-#!/bin/bash
+# !/bin/bash
+# runtest.sh
 # This runs a single test case
 
 cd ../oracles/
@@ -7,6 +8,7 @@ TOPLEVEL="oracles"
 ONEDOWN="../oracles"
 TWODOWN="../../oracles"
 
+# if running a single testCase and there is no testCaseID argument then user must enter testCase#
 if [ $# -eq 0 ]; then
     echo Enter the test case you would like to run: Format like testCase#
     read testcase
@@ -15,6 +17,7 @@ else
   testcase=`eval "echo $1 | cut -d'.' -f1"`
   fi
 
+# ignore the README
 if [ "$testcase.txt" == "README.txt" ]; then
   exit
   fi
@@ -32,8 +35,7 @@ ARGS=`cat $testfile | head -7 | tail -1`
 ORACLE=`cat $testfile | head -8 | tail -1`
 TANAGURUFILEDIR=/project/src
 
-# cat $testfile >> "$ONEDOWN/results.html"
-
+# set up html formatting
 echo "<div class=container>" >> "$ONEDOWN/results.html"
 
 # go to the tanaguru file
@@ -45,14 +47,15 @@ javac -d ../../$TESTCASEEXECDIR $TANAGURUFILE
 # go to the folder that has the driver
 cd ../../$TESTCASEEXECDIR/
 
-#compile the driver
+# compile the driver
 javac $TESTDRIVER
 
-#Run the testCase file
+# Run the testCase file
 java  $TESTMETHOD $ARGS > output.txt
 
 OUTPUT=$(cat output.txt | tail -1)
 
+# parse test case results to be displayed in html
 cat >> $ONEDOWN/results.html << EOL
 <table class="table table-bordered table-sm">
   <tbody>
@@ -98,12 +101,8 @@ else
 fi
 
 echo "</tr>" >> "$ONEDOWN/results.html"
-
-
 echo "</tbody>" >> "$ONEDOWN/results.html"
 echo "</table>" >> "$ONEDOWN/results.html"
-
-
 echo "</div>" >> "$ONEDOWN/results.html"
 
 # Remove the things you made to run the test
