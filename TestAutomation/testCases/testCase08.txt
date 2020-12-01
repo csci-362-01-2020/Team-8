@@ -3,6 +3,6 @@ contrast-finder-utils > ContrastChecker > distanceColor()
 Find Euclidean distance between two colors
 contrastDistanceTest.java
 ContrastChecker.java
-1. white/ 255 255 255, 2. black/000 000 000
+Find Euclidean distance between the colors color1: 255 255 255 (white) color2: 000 000 000 (black)
 255 255 255 000 000 000
 441.67

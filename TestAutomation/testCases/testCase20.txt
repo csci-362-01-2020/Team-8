@@ -3,6 +3,6 @@ contrast-finder-utils > ColorConvertor > rgb2Hex()
 Check response to invalid input
 rgbhexTest.java
 ColorConverter.java
-1. "apple"
+Check methods response to invalid input: "apple"
 "apple"
 error

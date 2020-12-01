@@ -1,9 +1,9 @@
 01
 contrast-finder-utils > DistanceCalculator > calculate()
-Check that the distance between two colors that are the same is 0
+Find distance between two colors
 calculateTest.java
 DistanceCalculator.java
-1. black/000 000 000, 2. black/000 000 000
+Find distance between the colors color1: 000 000 000 (black) color2: 000 000 000 (black)
 000 000 000 000 000 000
 0.0
 

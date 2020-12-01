@@ -3,6 +3,6 @@ contrast-finder-utils > ColorConvertor > rgb2Hex()
 Check response to negative input
 rgbhexTest.java
 ColorConverter.java
-1. -128 000 000
+Check methods response to negative input: -128 000 000
 -128 000 000
 error

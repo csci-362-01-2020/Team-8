@@ -1,8 +1,8 @@
 23
 contrast-finder-utils > ColorConverter > offsetRgb()
-Offset all rgb numbers in color - negative
+Calculate RGB number with an offset
 offsetRGBTest.java
 ColorConverter.java
-1. 155 211 007 -60 -8 -2
+Offset RGB value 155 211 007 by values -60 -8 -2
 155 211 007 -60 -8 -2
 java.awt.Color[r=95,g=203,b=5]

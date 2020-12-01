@@ -1,9 +1,9 @@
 09
 contrast-finder-utils > DistanceCalculator > calculate()
-Determine how calculate responds to a non-hexadecimal input
+Check method returns an Error from invalid input
 calculateTest.java
 DistanceCalculator.java
-1. black/000 000 000, 2. invalid input/GGG GGG GGG
+Find Euclidean distance between the colors color1: 000 000 000 (black) color2: GGG GGG GGG (invalid)
 000 000 000 GGG GGG GGG
 error
 
