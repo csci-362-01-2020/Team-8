@@ -3,6 +3,6 @@ contrast-finder-utils > ColorConverter > hex2Rgb()
 Check response to non-numeric input
 hexrgbTest.java
 ColorConverter.java
-1. #00G000
+Check methods response to non-numericc input: #00G000
 #00G000
 null

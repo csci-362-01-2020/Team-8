@@ -1,8 +1,8 @@
 21
 contrast-finder-utils > ColorConverter > offsetRgb()
-Check that offsetting by zero does not change color
+Calculate RGB number with an offset
 offsetRGBTest.java
 ColorConverter.java
-1. 200 200 200 0 0 0
+Offset RGB value 200 200 200 by 0 0 0
 200 200 200 0 0 0
 java.awt.Color[r=200,g=200,b=200]

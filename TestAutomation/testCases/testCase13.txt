@@ -1,8 +1,8 @@
 13
 contrast-finder-utils > ColorConvertor > rgb2Hex()
-Convert sapphire rgb to hexadecimal
+Convert RGB value to Hex value
 rgbhexTest.java
 ColorConverter.java
-1. 015 082 186
+Convert Sapphire RGB 015 082 186 to Hex
 015 082 186
 #0F52BA

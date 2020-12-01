@@ -1,8 +1,8 @@
 15
 contrast-finder-utils > ColorConverter > hex2Rgb()
-convert green hexadecimal to rgb
+Convert Hex value to a RGB value
 hexrgbTest.java
 ColorConverter.java
-1. #008000
+Convert Green Hex value #008000 to RGB
 #008000
 java.awt.Color[r=0,g=128,b=0]

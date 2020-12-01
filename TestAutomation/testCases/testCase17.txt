@@ -3,6 +3,6 @@ contrast-finder-utils > ColorConvertor > rgb2Hex()
 Check response to non-numeric input
 rgbhexTest.java
 ColorConverter.java
-1. 128 000 FFF
+Check methods response to non-numeric input: 128 000 FFF
 128 000 FFF
 error
